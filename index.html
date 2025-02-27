@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>San Diego Real Estate Growth - My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>San Diego Real Estate Value Growth</h1>
+        <p>Interactive charts showcasing housing trends over multiple timeframes</p>
+    </header>
+    <div class="button-container">
+        <button onclick="showChart('home')">View All</button>
+        <button onclick="showChart('months')">12 Months</button>
+        <button onclick="showChart('1year')">1 Year</button>
+        <button onclick="showChart('5year')">5 Years</button>
+        <button onclick="showChart('10year')">10 Years</button>
+    </div>
+    <section class="charts">
+        <div class="chart-container" id="months">
+            <h2>Last 12 months</h2>
+            <iframe src="months_chart.html" width="100%" height="400px"></iframe>
+        </div>
+        <div class="chart-container" id="1year">
+            <h2>1 year</h2>
+            <iframe src="1year_chart.html" width="100%" height="400px"></iframe>
+        </div>
+        <div class="chart-container" id="5year">
+            <h2>5 years</h2>
+            <iframe src="5year_chart.html" width="100%" height="400px"></iframe>
+        </div>
+        <div class="chart-container" id="10year">
+            <h2>10 years</h2>
+            <iframe src="10year_chart.html" width="100%" height="400px"></iframe>
+        </div>
+        
+    </section>
+    <script>
+        function showChart(chartId) {
+            if (chartId === 'home') {
+                document.querySelectorAll('.chart-container').forEach(container => {
+                    container.style.display = 'block';
+                });
+            } else {
+                document.querySelectorAll('.chart-container').forEach(container => {
+                    container.style.display = 'none';
+                });
+                document.getElementById(chartId).style.display = 'block';
+            }
+        }
+    </script>
+
+    <style>
+        .button-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .button-container button {
+            margin: 0 10px;
+            padding: 8px 16px;
+            cursor: pointer;
+        }
+        footer {
+            font-size: 0.8em;
+            padding: 10px;
+            margin-top: 20px;
+            text-align: center;
+        }
+        footer p {
+            margin: 0;
+        }
+        .charts {
+            margin-bottom: 40px;
+        }
+    </style>
+
+    <footer>
+        <p>Created by Luis Samboy</p><a href="www.luissamboy.com">www.luissamboy.com</a>
+    </footer>
+</body>
+</html>
