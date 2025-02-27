@@ -11,16 +11,31 @@ An interactive web visualization showing the growth of real estate values in San
 
 ## Technologies Used
 
+### Frontend
 - HTML5
 - CSS3
 - JavaScript
 - Chart visualization (embedded iframes)
+
+### Data Analysis & Visualization
+- Python
+- Pandas (Data manipulation and analysis)
+- Plotly (Interactive chart generation)
+- Jupyter Notebook (Data exploration and chart creation)
 
 ## Setup
 
 1. Clone the repository
 2. Open `index.html` in a web browser
 3. No additional setup required - all dependencies are loaded via CDN
+
+### For Development
+To modify charts or analyze data:
+1. Install Python requirements:
+```bash
+pip install pandas plotly jupyter
+```
+2. Open and run the Jupyter notebooks in the repository
 
 ## Author
 
